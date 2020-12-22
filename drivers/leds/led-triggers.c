@@ -403,8 +403,14 @@ void led_trigger_event(struct led_trigger *trig,
 	trig->brightness = brightness;
 
 	rcu_read_lock();
-	list_for_each_entry_rcu(led_cdev, &trig->led_cdevs, trig_list)
-		led_set_brightness(led_cdev, brightness);
+	list_for_each_entry_rcu(led_cdev, &trig->led_cdevs, trig_list) {
+		if (led_cdev->flags & LED_PANIC_INDICATOR_OFF)
+			led_set_brightness(led_cdev, LED_OFF);
+		else if (led_cdev->flags & LED_PANIC_INDICATOR_ON)
+			led_set_brightness(led_cdev, LED_FULL);
+		else
+			led_set_brightness(led_cdev, brightness);
+	}
 	rcu_read_unlock();
 }
 EXPORT_SYMBOL_GPL(led_trigger_event);
