@@ -504,6 +504,12 @@
 	#address-cells = <1>;
 	#size-cells = <0>;
 	ti,pindir-d0-out-d1-in;
+
+	spidev@0 {
+		compatible = "rohm,dh2228fv";
+		spi-max-frequency = <20000000>;
+		reg = <0>;
+	};
 };
 
 &ospi0 {
