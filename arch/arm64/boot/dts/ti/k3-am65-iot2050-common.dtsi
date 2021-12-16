@@ -86,6 +86,7 @@
 
 		status-led-green {
 			gpios = <&wkup_gpio0 24 GPIO_ACTIVE_HIGH>;
+			panic-indicator-off;
 		};
 
 		user-led1-red {
