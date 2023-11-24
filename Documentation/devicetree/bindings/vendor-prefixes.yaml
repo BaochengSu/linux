@@ -456,6 +456,8 @@ patternProperties:
     description: Eukréa Electromatique
   "^everest,.*":
     description: Everest Semiconductor Co. Ltd.
+  "^everlight,.*":
+    description: EVERLIGHT Electronics Co., Ltd.
   "^everspin,.*":
     description: Everspin Technologies, Inc.
   "^evervision,.*":
