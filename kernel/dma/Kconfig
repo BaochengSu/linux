@@ -111,6 +111,13 @@ config DMA_NEED_SYNC
 		 ARCH_HAS_SYNC_DMA_FOR_CPU_ALL || DMA_API_DEBUG || \
 		 ARCH_HAS_DMA_OPS || SWIOTLB
 
+config SWIOTLB_SEGSIZE
+    int "SWIOTLB segment size"
+    default 128
+    help
+      Set the maximum allowable number of contiguous slabs to map.
+      Must be a power of 2.
+
 config DMA_RESTRICTED_POOL
 	bool "DMA Restricted Pool"
 	depends on OF && OF_RESERVED_MEM && SWIOTLB
