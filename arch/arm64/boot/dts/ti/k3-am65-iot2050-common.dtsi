@@ -714,3 +714,27 @@
 		status = "disabled";
 	};
 };
+
+&ehrpwm0 {
+	status = "okay";
+};
+
+&ehrpwm1 {
+	status = "okay";
+};
+
+&ehrpwm2 {
+	status = "okay";
+};
+
+&ehrpwm3 {
+	status = "okay";
+};
+
+&ehrpwm4 {
+	status = "okay";
+};
+
+&ehrpwm5 {
+	status = "okay";
+};
