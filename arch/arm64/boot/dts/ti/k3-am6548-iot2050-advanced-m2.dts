@@ -17,6 +17,7 @@
 #include "k3-am65-iot2050-dp.dtsi"
 #include "k3-am65-iot2050-common-pg2.dtsi"
 #include "k3-am65-iot2050-arduino-connector.dtsi"
+#include "k3-am65-iot2050-arduino-connector-pg2-rework.dtsi"
 
 / {
 	compatible = "siemens,iot2050-advanced-m2", "ti,am654";
